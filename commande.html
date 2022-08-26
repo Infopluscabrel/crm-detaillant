@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Home / Enregistrer Commande - Detaillant PaieCash</title>
+  <title>Home / Enregistrer Commande - Détaillant PaieCash</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -45,7 +45,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">Detaillant Paiecash</span>
+        <span class="d-none d-lg-block">Détaillant Paiecash</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -268,8 +268,8 @@
 
   </header><!-- End Header -->
 
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
+   <!-- ======= Sidebar ======= -->
+   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -279,15 +279,20 @@
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
-
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="parametres.html">
+          <i class="bi bi-book"></i>
+          <span>Parametres généraux</span>
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Gestion du Reseau</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-menu-button-wide"></i><span>CRM</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="revendeurs.html">
-              <i class="bi bi-circle"></i><span>Les revendeurs</span>
+              <i class="bi bi-circle"></i><span>Les Clients</span>
             </a>
           </li>
           <li>
@@ -324,145 +329,169 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="ajout-list.html">
-              <i class="bi bi-circle"></i><span>Articles</span>
+            <a href="ajout-article.html">
+              <i class="bi bi-circle"></i><span>Parametres des Articles</span>
             </a>
           </li>
           <li>
             <a href="stocks-list.html">
-              <i class="bi bi-circle"></i><span>Stocks</span>
+              <i class="bi bi-circle"></i><span>Parametres de Stock</span>
             </a>
           </li>
-          <!-- <li>
-            <a href="commande.html">
-              <i class="bi bi-circle"></i><span>Commandes</span>
-            </a>
-          </li>End Tables Nav -->
         </ul>
       </li>
-      <li class="nav-item">
-        <a class="nav-link " href="suivi-commande.html">
-          <i class="bi bi-book"></i>
-          <span>Suivie Commande</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-
-     
-
-      <li class="nav-heading">Pages</li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
-          <i class="bi bi-person"></i>
-          <span>Profile</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
-          <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
-        </a>
-      </li><!-- End F.A.Q Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link " href="pages-contact.html">
-          <i class="bi bi-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
-        </a>
-      </li><!-- End Register Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Login</span>
-        </a>
-      </li><!-- End Login Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-dash-circle"></i>
-          <span>Error 404</span>
-        </a>
-      </li><!-- End Error 404 Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
-          <i class="bi bi-file-earmark"></i>
-          <span>Blank</span>
-        </a>
-      </li><!-- End Blank Page Nav -->
-
-    </ul>
-
-  </aside><!-- End Sidebar-->
+      </li><!-- End Tables Nav -->  
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="commande.html">
+            <i class="bi bi-pen"></i>
+            <span>Enregistrer Ventes</span>
+          </a>
+        </li><!-- End suivi commande Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="suivi-commande.html">
+            <i class="bi bi-book"></i>
+            <span>Mes ventes</span>
+          </a>
+        </li><!-- End suivi commande Nav -->
+              
+    
+        <li class="nav-heading">Pages</li>
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="users-profile.html">
+            <i class="bi bi-person"></i>
+            <span>Profile</span>
+          </a>
+        </li><!-- End Profile Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-faq.html">
+            <i class="bi bi-question-circle"></i>
+            <span>F.A.Q</span>
+          </a>
+        </li><!-- End F.A.Q Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-contact.html">
+            <i class="bi bi-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </li><!-- End Contact Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-register.html">
+            <i class="bi bi-card-list"></i>
+            <span>Register</span>
+          </a>
+        </li><!-- End Register Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-login.html">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Login</span>
+          </a>
+        </li><!-- End Login Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-error-404.html">
+            <i class="bi bi-dash-circle"></i>
+            <span>Error 404</span>
+          </a>
+        </li><!-- End Error 404 Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-blank.html">
+            <i class="bi bi-file-earmark"></i>
+            <span>Blank</span>
+          </a>
+        </li><!-- End Blank Page Nav -->
+    
+      </ul>
+    
+    </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Enregistrer Commande</h1>
+      <h1>Enregistrer Vente</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Enregistrer Commandes</li>
+          <li class="breadcrumb-item">Enregistrer Ventes</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
+    <div class="container">
 
-    <section class="section contact">
+      
+        <div class="container">
+          <form id="SaveLigneCommande">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
-      <div class="row gy-4">
+              <div class="card mb-3">
+                <div class="d-flex justify-content-center py-4">
+                  <a href="index.html" class="logo d-flex align-items-center w-auto">
+                    <img src="assets/img/logo.png" alt="">
+                    <span class="d-none d-lg-block">Détaillant Paiecash</span>
+                  </a>
+                </div>
+                <div class="card-body">
 
-       
-        <div class="col-xl-12">
-          <div class="card p-4">
-            <form action="" method="post" class="php-email-form">
-                <label for="yourUsername" class="form-label">Nom</label>
-                <div class="input">
-                  <input type="text" name="username" class="form-control" id="yourUsername" required>
-                  <div class="invalid-feedback">S'il vous plait entrez les produits commandés!</div>
-                </div><br><br>
-                <label for="yourUsername" class="form-label">Quantité</label>
-                <div class="input">
-                  <input type="text" name="username" class="form-control" id="yourUsername" required>
-                  <div class="invalid-feedback">S'il vous plait entrez la quantité des produits commandés!</div>
-                </div><br><br>
-                <label for="yourUsername" class="form-label">Prix unitaire</label>
-                <div class="container">
-                  <input type="text" name="username" class="form-control" id="yourUsername" required>
-                  <div class="invalid-feedback">S'il vous plait entrez le prix unitaitre des produits commandés!</div><br>
-                  <label for="yourUsername" class="form-label">Prix total</label>
-                    <div class="input-group has-validation">
-                  <span class="input-group-text" id="inputGroupPrepend">prix unitaire x quantité</span>
-                  <input type="text" name="username" class="form-control" id="yourUsername" required>
-                  <div class="invalid-feedback">S'il vous plait entrez votre nom d'utilisateur de distribution.</div>
-                </div><br><br>
-                </div><br><br>
-                <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-  
-                    <button type="submit">Enregistrer</button>
-                  </div>
-  
+                  <div class="select">
+                    <select name="article_id" class="form-control" id="entree">
+                        <option value="0">Sélectionnez le nom de l'article </option>
+      
+                    </select>  <br>
+                  
 
-              
-            </form>
+                    <div class="col-12">
+                      <label for="quantity" class="form-label">Quantité</label>
+                      <input type="number" name="quantitearticle" class="form-control" id="quantity" required>
+                      <div class="invalid-feedback">S'il vous plait entrez votre mot de passe!</div>
+                    </div><br>
+
+                    <div class="col-12">
+                      <label for="prix-unitaire" class="form-label">Prix Unitaire</label>
+                      <input type="number" name="prix-unitaire" class="form-control" id="prix_unitaire" required>
+                      <div class="invalid-feedback">S'il vous plait entrez le prix unitaire de l'article!</div>
+                    </div><br>
+                   <!--<div class="col-12">
+                      <label for="prix-total" class="form-label">Prix Total</label>
+                      <input type="number" name="prix-total" class="form-control" id="prix_total" required>
+                    </div>
+                    <br>-->
+                   
+                    <div class="col-12-sm-6">
+                      <div><a>
+                        <button class="btn btn-primary w-100" type="submit" id="AjouterProduit">Ajouter</button>
+                      </a></div><br>
+                      <div><a href="facture.html"> <button class="btn btn-primary w-100" type="submit">Valider</button></a></div> 
+                                           
+                    </div>
+                   
+                  </form>
+
+                </div>
+              </div>
+
+              <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+          
+               
+              </div>
+
+            </div>
           </div>
-
         </div>
 
-      </div>
+      
 
-    </section>
+    </div>
+    
 
   </main><!-- End #main -->
 
@@ -485,9 +514,66 @@
   <script src="assets/vendor/chart.js/chart.min.js"></script>
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="assets/vendor/echarts/echarts.min.js"></script>
-
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.livequery.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      const getNomArticle_url =
+        "http://localhost:5000/article/all";
+      getapi(getNomArticle_url);
+    });
+
+
+    let list_nom;
+    const getNomArticle_url =
+      "http://localhost:5000/article/all";
+
+    // Defining async function
+    async function getapi(url) {
+
+      // Storing response
+      const response = await fetch(url);
+
+      // Storing data in form of JSON
+      var data = await response.json();
+      console.log("début de la liste");
+      // console.log(data);
+      list_nom = data;
+
+      if (response) {
+        hideloader();
+      }
+      console.log("appel remplir" + data);
+      remplir(data);
+      return data;
+    }
+    // Calling that async function
+    getapi(getNomArticle_url);
+    console.log("voici la liste des noms");
+    console.log(list_nom);
+    // Function to hide the loader
+    function hideloader() {
+
+    }
+   
+    function remplir(data) {
+
+      var options = "";
+      data.data.forEach(function (produit) {
+        //entree.options.indice[indice] = new Option(NOM_PRODUIT, indice);
+        options += `<option value="${produit.ID_PRODUIT}"> ${produit.NOM_PRODUIT} </option>`;
+        console.log(produit.NOM_PRODUIT);
+      })
+
+      document.getElementById("entree").innerHTML = options;
+      console.log(options);
+    }
+
+  </script>
+  <script src="assets/js/commande.js  "></script>
 
 </body>
 

@@ -19,7 +19,7 @@ $('#saveRevendeur').livequery('submit',   function(e){ e.preventDefault() ;
     var date_signature = document.getElementById("dateSignature").value;
     var cni = document.getElementById("cni").value;
     var patente = document.getElementById("patente").value;
-    var nui = document.getElementById("nui").value;*/
+    var nui = document.getElementById("nui").value;
     var etat_validation = document.getElementById("etatValidation").value;
     var date_validation = document.getElementById("dateValidation").value;
     var etat_stock = document.getElementById("etatStock").value;
@@ -124,7 +124,7 @@ function show(data) {
     <td><ul class="list-inline m-0">
                       
     <li class="list-inline-item">
-      <button class="btn btn-success btn-sm " type="button" data-toggle="modal" data-target="#ajoutRevendeur" data-placement="top" title="Edit"
+      <button class="btn btn-success btn-sm " type="button" data-toggle="modal" data-target="#editerClient" data-placement="top" title="Edit"
         style="margin-bottom: 10px; vertical-align: baseline;"><i class="bi bi-pencil-square"></i>Editer</button>
     </li>
     <li class="list-inline-item">

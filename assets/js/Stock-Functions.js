@@ -49,20 +49,14 @@ function show(data) {
 
 //fonction pour enregistrer un stock
 $('#saveStock').livequery('submit',   function(e){ e.preventDefault() ; 
-    var nom = document.getElementById("nom").value;
-    var quantite = document.getElementById("quantite").value;
+    var nom = document.getElementById("entree").value;
+    var quantite = document.getElementById("yourEmail").value;
     
-    var formData = new FormData();
-    formData.append('nom', nom);
-    formData.append('prix', prix);
-    formData.append('quantite', quantite);
-    formData.append('proprietaire', "1");
-    
-  
- var data  = {nom: nom, quantite: quantite};
-  console.log(data);
+          
+ 	var data  = {id: nom, quantite: quantite};
+ 	 console.log(data);
 
-  $.post("http://localhost:5000/article/update", data, function(puerto){
+  	$.post("http://localhost:5000/article/stock/entree", data, function(puerto){
 
    console.log(puerto) ;
   }, 'json');
@@ -73,7 +67,7 @@ $('#saveStock').livequery('submit',   function(e){ e.preventDefault() ;
 
 //fonctionpour lister tout les articles en stock
 const getArticle_url =
-	"http://localhost:5000/article/all";
+	"http://localhost:5000/article/stock/entree/all";
 
 // Defining async function
 async function getapi(url) {
@@ -113,15 +107,15 @@ function show(data) {
 	// Loop to access all rows
 	 for (let r of data.data) {
 		tab += `<tr>
-    <td>${r.ID_PRODUIT} </td>      
+    <td>${r.id} </td>      
 	<td>${r.NOM_PRODUIT} </td>
-	<td>${r.QUANTITE}</td>
+	<td>${r.quantite}</td>
 	<td>${r.CREATED_AT} </td>
        
     <td><ul class="list-inline m-0">
                       
     <li class="list-inline-item">
-      <button class="btn btn-success btn-sm " type="button" data-toggle="modal" data-target="#ajoutRevendeur" data-placement="top" title="Edit"
+      <button class="btn btn-success btn-sm " type="button" data-toggle="modal" data-target="#editerStock" data-placement="top" title="Edit"
         style="margin-bottom: 10px; vertical-align: baseline;"><i class="bi bi-pencil-square"></i>Editer</button>
     </li>
     <li class="list-inline-item">

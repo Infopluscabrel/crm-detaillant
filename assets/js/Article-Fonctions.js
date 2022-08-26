@@ -80,7 +80,7 @@ function show(data) {
     <td><ul class="list-inline m-0">
                       
     <li class="list-inline-item">
-      <button class="btn btn-success btn-sm " type="button" data-toggle="modal" data-target="#ajoutRevendeur" data-placement="top" title="Edit"
+      <button class="btn btn-success btn-sm " type="button" data-toggle="modal" data-target="#editerArticle" data-placement="top" title="Edit"
         style="margin-bottom: 10px; vertical-align: baseline;"><i class="bi bi-pencil-square"></i>Editer</button>
     </li>
     <li class="list-inline-item">

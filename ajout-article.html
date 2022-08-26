@@ -263,28 +263,31 @@
 
   </header><!-- End Header -->
 
-  <!-- ======= Sidebar ======= -->
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
-  
+   <!-- ======= Sidebar ======= -->
+   <aside id="sidebar" class="sidebar">
+
     <ul class="sidebar-nav" id="sidebar-nav">
-  
+
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link collapsed" href="index.html">
           <i class="bi bi-grid"></i>
-          <span>Accueil</span>
+          <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Gestion du Reseau</span><i
-            class="bi bi-chevron-down ms-auto"></i>
+        <a class="nav-link collapsed" href="parametres.html">
+          <i class="bi bi-book"></i>
+          <span>Parametres généraux</span>
         </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>CRM</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="revendeurs.html">
-              <i class="bi bi-circle"></i><span>Les Revendeurs </span>
+              <i class="bi bi-circle"></i><span>Les Clients</span>
             </a>
           </li>
           <li>
@@ -292,38 +295,34 @@
               <i class="bi bi-circle"></i><span>Resultats du réseau</span>
             </a>
           </li>
-         
+          
+          
         </ul>
-      </li><!-- End Tables Nav -->
+      </li><!-- End Components Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Finances</span><i
-            class="bi bi-chevron-down ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Finances</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-      
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="stocks.html">
-              <i class="bi bi-circle"></i><span>Gains </span>
+            <a href="forms-elements.html">
+              <i class="bi bi-circle"></i><span>Gains</span>
             </a>
           </li>
           <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span>Resultats par Revendeur</span>
+            <a href="forms-layouts.html">
+              <i class="bi bi-circle"></i><span>Resultats par Vendeur</span>
             </a>
           </li>
-               
         </ul>
-      </li><!-- End Tables Nav -->
+      </li><!-- End Forms Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Gestion des Stocks</span><i
-            class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-layout-text-window-reverse"></i><span>Gestion des Stocks</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-  
           <li>
             <a href="ajout-article.html">
               <i class="bi bi-circle"></i><span>Parametres des Articles</span>
@@ -334,81 +333,77 @@
               <i class="bi bi-circle"></i><span>Parametres de Stock</span>
             </a>
           </li>
-          <!----<li>
-            <a href="commandes.html">
-              <i class="bi bi-circle"></i><span>Commandes</span>
-            </a>
-          </li> End Tables Nav -->
-  
-  
         </ul>
+      </li>
       </li><!-- End Tables Nav -->  
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="suivi-commande.html">
-          <i class="bi bi-book"></i>
-          <span>Suivi commande</span>
-        </a>
-      </li><!-- End suivi commande Nav -->
-  
-  
-  
-  
-  
-  
-      <li class="nav-heading">Pages</li>
-  
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
-          <i class="bi bi-person"></i>
-          <span>Profile</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-  
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
-          <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
-        </a>
-      </li><!-- End F.A.Q Page Nav -->
-  
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
-  
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
-        </a>
-      </li><!-- End Register Page Nav -->
-  
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Login</span>
-        </a>
-      </li><!-- End Login Page Nav -->
-  
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-dash-circle"></i>
-          <span>Error 404</span>
-        </a>
-      </li><!-- End Error 404 Page Nav -->
-  
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
-          <i class="bi bi-file-earmark"></i>
-          <span>Blank</span>
-        </a>
-      </li><!-- End Blank Page Nav -->
-  
-    </ul>
-  
-  </aside><!-- End Sidebar-->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="commande.html">
+            <i class="bi bi-pen"></i>
+            <span>Enregistrer Ventes</span>
+          </a>
+        </li><!-- End suivi commande Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="suivi-commande.html">
+            <i class="bi bi-book"></i>
+            <span>Mes ventes</span>
+          </a>
+        </li><!-- End suivi commande Nav -->
+              
+    
+        <li class="nav-heading">Pages</li>
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="users-profile.html">
+            <i class="bi bi-person"></i>
+            <span>Profile</span>
+          </a>
+        </li><!-- End Profile Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-faq.html">
+            <i class="bi bi-question-circle"></i>
+            <span>F.A.Q</span>
+          </a>
+        </li><!-- End F.A.Q Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-contact.html">
+            <i class="bi bi-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </li><!-- End Contact Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-register.html">
+            <i class="bi bi-card-list"></i>
+            <span>Register</span>
+          </a>
+        </li><!-- End Register Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-login.html">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Login</span>
+          </a>
+        </li><!-- End Login Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-error-404.html">
+            <i class="bi bi-dash-circle"></i>
+            <span>Error 404</span>
+          </a>
+        </li><!-- End Error 404 Page Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-blank.html">
+            <i class="bi bi-file-earmark"></i>
+            <span>Blank</span>
+          </a>
+        </li><!-- End Blank Page Nav -->
+    
+      </ul>
+    
+    </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
 
@@ -463,79 +458,85 @@
 
 
     <!-- modal ajout stock-->
-<div class="modal fade show" id="ajoutArticlelast" tabindex="-1" role="dialog" aria-labelledby="ajoutArticle"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
+    <div class="modal fade" id="editerArticle" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Distributeur Paiecash</h5>
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Détaillant Paiecash</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-            <div class="pt-4 pb-2">
-                <h5 class="card-title text-center pb-0 fs-4">Modifier une Entrée</h5>
-          
-              </div>
-          
-              <form class="row g-3 needs-validation" novalidate>
-                <div class="col-12">
-                  <label for="yourName" class="form-label">Nom</label>
-                  <input type="text" name="name" class="form-control" id="yourName" required>
-                  <div class="invalid-feedback">Nom de l'article obligatoire!</div>
-                </div>
-          
-                <div class="col-12">
-                  <label for="yourQuantite" class="form-label">La Quantite</label>
-                  <input type="number" name="quantite" class="form-control" id="yourQuantite" required>
-                  <div class="invalid-feedback">Quantité obligatioire!</div>
-                </div>
-                
-                <div class="col-12">
-                  <label for="prix" class="form-label">Prix HT  </label>
-                  <input type="number" name="prix" class="form-control" id="prix" required>
-                  <div class="invalid-feedback">prix hors taxe obligatioire!</div>
-                </div>         
-                <div class="col-12">
-                  <label for="yourDate" class="form-label">Date</label>
-                  <input type="date" name="Date" class="form-control" id="yourDate" required>
-                  <div class="invalid-feedback">date d'ajout du produit obigatoire!</div>
-                </div>
-               
-              </form>
-          
-           
-      
+      <div class="modal-body">
+    <div class="modal-body">
+      <div class="card mb-3">
+    
+        <div class="card-body">
+    
+          <div class="pt-4 pb-2">
+            <h5 class="card-title text-center pb-0 fs-4">Modifier un Article</h5>
+    
+          </div>
+    
+          <form class="row g-3 needs-validation" novalidate id="saveArticle">
+            <div class="col-12">
+              <label for="nom" class="form-label">Nom de l'article</label>
+              <input type="text" name="nom" class="form-control" id="nom" required>
+              <div class="invalid-feedback">Entrez le nom de l'article!</div>
+            </div>
+    
+            <div class="col-12">
+              <label for="quantite" class="form-label">Quantité</label>
+              <input type="number" name="quantite" class="form-control" id="quantite" required>
+              <div class="invalid-feedback">Entrez la quantité de l'article!</div>
+            </div>
+    
+            <div class="col-12">
+              <label for="prix" class="form-label">Prix HT</label>
+              <input type="number" name="prix" class="form-control" id="prix-article" required>
+              <div class="invalid-feedback">Entrez le prix unitaire du produit!</div>
+            </div>
+            
+            <div class="col-12">
+              <button class="btn btn-primary w-100" type="submit">Modifier</button>
+              
+            </div>
+            
+          </form>
+    
+        </div>
+      </div>
+    </div>
+      </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-        <button type="button" class="btn btn-primary">Sauvegarder</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
-
 <!-- End modal -->
 
-    <!-- modal plus d'informations du joueur -->
+    <!-- modal plus d'informations de l'article -->
     <div class="modal fade show" id="plusinfo" tabindex="-1" role="dialog" aria-labelledby="plusinfo"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Distributeur Paiecash</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Détaillant Paiecash</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
               <div>
-                Nom du stock : Maillots
+                Nom du l'article : Maillots
 
                 Quantite :  100
 
-                Date : 12-07-2022 
+                Prix : 600
 
-
+                date: 26-08-2022
               </div>
           </div>
           <div class="modal-footer">
@@ -551,13 +552,13 @@
   </main><!-- End #main -->
 
 
-<!-- Modal -->
+<!-- Modal ajout article -->
 <div class="modal fade" id="ajoutArticle" tabindex="-1" role="dialog"
   aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">Distributeur Paiecash</h5>
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Détaillant Paiecash</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
