@@ -30,7 +30,10 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- Javascript function -->
-  
+  <!-- qrcode  -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2022.2.802/js/kendo.all.min.js"></script>
+
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.1.0
@@ -63,17 +66,11 @@
 
                   <div class="pt-4 pb-2">
                     <h5 class="card-title text-center pb-0 fs-4">Facture</h5>
-                    <p class="text-center small">Scanner le QR CODE pour payer</p>
                   </div>
 
                   <form class="row g-3 needs-validation" novalidate id="">
 
-                    <div class="col-12">
-                      <label for="yourUsername" class="form-label">QR CODE</label>
-                      <div class="container">
-                        
-                      </div>
-                    </div>
+                    
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Détails de la  commande</label>
@@ -86,7 +83,7 @@
                             <th scope="col">Prix_total</th>
                             </tr>
                         </thead>
-                        <tbody>               
+                        <tbody id="cart-tablebody">               
                         </tbody>
                       </table>
 
@@ -98,7 +95,30 @@
                         <div class="invalid-feedback">S'il vous plait scannez le qr code pour valider le paiement </div>
                       </div><br><br>
                     <div class="col-12">
-                      <a href="Moyenspayement.html"> <button class="btn btn-primary w-100" type="submit">Valider</button></a>                     
+                      <a href="Moyenspayement.html"> <button class="btn btn-primary w-100" type="submit" id="confirm-command">Valider</button></a>                     
+                    </div>
+
+                    <div class="col-12 text-center" id="qrCode" >
+
+                            <div style=" margin: auto ;">
+
+                                    <script>
+                                          console.log("facture QRCODE");
+                                          var value  = "Facture QRCODE";                 
+                                                $("#qrCode").kendoQRCode({
+                                            value: value,
+                                            color: "#008000" , 
+                                            size: 50,
+                                            overlay: {
+                                              imageUrl: "./assets/img/logo.png",
+                                              width: 20,
+                                              height: 20
+                                            }
+                                          });
+
+                                          $(`[data-role="surface"]`).css('margin' , 'auto') ;
+                                        </script>
+                              </div>
                     </div>
                    
                   </form>

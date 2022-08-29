@@ -1,1 +1,1 @@
-//affichage du Login au qr code
+//affichage des information de la facture au qr code

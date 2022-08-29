@@ -344,7 +344,7 @@
         <li class="nav-item">
           <a class="nav-link collapsed" href="commande.html">
             <i class="bi bi-pen"></i>
-            <span>Enregistrer Ventes</span>
+            <span>Enregistrer Commandes</span>
           </a>
         </li><!-- End suivi commande Nav -->
         <li class="nav-item">
@@ -413,11 +413,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Enregistrer Vente</h1>
+      <h1>Enregistrer Commandes</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Enregistrer Ventes</li>
+          <li class="breadcrumb-item">Enregistrer Commandes</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -453,14 +453,14 @@
 
                     <div class="col-12">
                       <label for="prix-unitaire" class="form-label">Prix Unitaire</label>
-                      <input type="number" name="prix-unitaire" class="form-control" id="prix_unitaire" required>
-                      <div class="invalid-feedback">S'il vous plait entrez le prix unitaire de l'article!</div>
+                      <input readonly="readonly" name="prix-unitaire" class="form-control" id="prix_unitaire" value="" required>
+                      
                     </div><br>
-                   <!--<div class="col-12">
+                   <div class="col-12">
                       <label for="prix-total" class="form-label">Prix Total</label>
-                      <input type="number" name="prix-total" class="form-control" id="prix_total" required>
+                      <input readonly="prix" name="prix-total" class="form-control" id="prix_total" value="0" required>
                     </div>
-                    <br>-->
+                    <br>
                    
                     <div class="col-12-sm-6">
                       <div><a>
