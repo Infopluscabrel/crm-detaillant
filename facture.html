@@ -77,7 +77,7 @@
                       <table class="table" id="">
                         <thead>
                           <tr>
-                            <th scope="col">id_facture</th>
+                            <th scope="col">N°</th>
                             <th scope="col">Article</th>
                             <th scope="col">Quantité</th>
                             <th scope="col">Prix_total</th>
@@ -91,11 +91,11 @@
 
                     <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">Net a payer</span>
-                        <span type="text" name="username" class="form-control" id="NetApayer "></span>
+                        <span readonly ="readonly" name="username" class="form-control" id="NetApayer "></span>
                         <div class="invalid-feedback">S'il vous plait scannez le qr code pour valider le paiement </div>
                       </div><br><br>
                     <div class="col-12">
-                      <a href="Moyenspayement.html"> <button class="btn btn-primary w-100" type="submit" id="confirm-command">Valider</button></a>                     
+                      <a href="#"> <button class="btn btn-primary w-100" type="submit" id="confirm-command">Valider</button></a>                     
                     </div>
 
                     <div class="col-12 text-center" id="qrCode" >
@@ -154,8 +154,8 @@
   <script src="assets/vendor/chart.js/chart.min.js"></script>
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="assets/vendor/echarts/echarts.min.js"></script>
- 
-  
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/facture.js"></script>
   
 
   <!-- Template Main JS File -->

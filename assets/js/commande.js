@@ -25,7 +25,7 @@ $('#SaveLigneCommande').livequery('submit',   function(e){ e.preventDefault() ;
 $('#entree').livequery('change',   function(e){ 
  id = $('#entree').val(); 
   console.log(id);
-
+  
 $.get("http://localhost:5000/article/profile/"+id, function(puerto){
   
   $("#prix_unitaire").val(puerto.data[0].prix) ;
@@ -48,20 +48,50 @@ $('#quantity').livequery('change',   function(e){
  return false;
  
  });
-localStorage.setItem('panier', JSON. stringify([]));
+
+
 $('#AjouterProduit').livequery('click', function(e){
-  var nom = "";
-  var quantite = "";
-  var prix_total = ""; 
-  document.getElementById("entree").innerHTML = nom;
-  document.getElementById("quantity").innerHTML = quantite;
-  document.getElementById("prix_total").innerHTML = prix_total;
-  var panier = localStorage.getItem('panier');
-  panier.push({
-    nom, quantite, prix_total
+  fetch("http://localhost:5000/article/all") 
+  .then(function(response){
+  return response.json();
+  })
+  .then(function(data){
+    console.log(data);
+  localStorage.setItem("articles", JSON.stringify(data));
+    if(!localStorage.getItem("panier")){
+    localStorage.setItem("panier", "[]");
+    }
   });
-  console.log(panier);
   
+  
+  function addItemeToPanier(articleId){
+    let articles = JSON.parse(localStorage.getItem("articles"));
+    let panier = JSON.parse(localStorage.getItem("panier"));
+    console.log("article");
+    console.log(articles);
+    console.log("fin");
+    let article = articles.data.find(function(item){
+      return item.id == articleId;
+    });
+    if (panier.lenght == 0){
+      panier.push("article");
+    }else{
+      let res = panier.find(element => element.id == articleId);
+      if(res === undefined){
+        panier.push(article);
+      }
+    }
+    localStorage.setItem("panier", JSON.stringify(articles));
+  //  console.log(panier);
+  }
+  id = $('#entree').val(); 
+  addItemeToPanier(id);
+  document.getElementById("entree").value ="selectionner le nom de l'article";
+  document.getElementById("quantity").value ="";
+  document.getElementById("prix_unitaire").value ="";
+  document.getElementById("prix_total").value ="";
+});
 
-})
-
+$('#ValiderCommande').livequery('click', function(e){
+  window.location.href="file:///C:/Users/dell/Documents/D%C3%A9taillant%20Dashboard/detaillant/crm-paiecash/facture.html";
+});
