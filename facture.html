@@ -68,12 +68,10 @@
                     <h5 class="card-title text-center pb-0 fs-4">Facture</h5>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate id="">
-
-                    
+                  <form  id="savefacture">
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Détails de la  commande</label>
+                      <label for="detailscommande" class="form-label">Détails de la  commande</label>
                       <table class="table" id="">
                         <thead>
                           <tr>
@@ -90,14 +88,12 @@
                     </div>
 
                     <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">Net a payer</span>
-                        <span readonly ="readonly" name="username" class="form-control" id="NetApayer "></span>
-                        <div class="invalid-feedback">S'il vous plait scannez le qr code pour valider le paiement </div>
-                      </div><br><br>
-                    <div class="col-12">
-                      <a href="#"> <button class="btn btn-primary w-100" type="submit" id="confirm-command">Valider</button></a>                     
-                    </div>
-
+                      <span class="input-group-text" id="inputGroupPrepend">Net a payer</span>
+                      <span name="username" class="form-control" id="NetApayer"></span>
+                        
+                    </div><br><br>
+                    <div><a href="Moyenspayement.html"> <button class="btn btn-primary w-100" id="validerfacture" type="submit">Valider</button></a></div>                              
+                     <br> 
                     <div class="col-12 text-center" id="qrCode" >
 
                             <div style=" margin: auto ;">
@@ -155,6 +151,7 @@
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="assets/vendor/echarts/echarts.min.js"></script>
   <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.livequery.js"></script>
   <script src="assets/js/facture.js"></script>
   
 

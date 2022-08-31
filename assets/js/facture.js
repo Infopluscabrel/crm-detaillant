@@ -1,17 +1,22 @@
-let articles = JSON.parse(localStorage.getItem("articles")).data;
-let panier = JSON.parse(localStorage.getItem("panier"));
-console.log("article");
-console.log(articles);
-console.log("fin");
-console.log("panier");
+var panier = JSON.parse( localStorage.getItem('panier'));
 console.log(panier);
-console.log("fin");
+var NetApayer = 0;
 $.each(panier, function(key, value){
     $('tbody').append(`<tr>
-    <th class="nom"></th>
-    <th class="nom">${articles.ID_PRODUIT}</th>
-    <th class="quantite">${articles.QUANTITE}</th>
-    <th class="prix">${articles.prix_total}</th>
+    <th>${key+1}</th>
+    <th>${value.nom}</th>
+    <th>${value.quantite}</th>
+    <th>${value.prix_total}</th>
   </tr>`)
-})
+  NetApayer = NetApayer + parseFloat(value.prix_total);
+  console.log(NetApayer);
+  $('#NetApayer').html(`${NetApayer}`);
+
+});
+$('#validerfacture').livequery('click', function(e){ e.preventDefault() ;
+        window.location.href="Moyenspayement.html";
+  });
+
+
+
    

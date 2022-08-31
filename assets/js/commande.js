@@ -49,49 +49,36 @@ $('#quantity').livequery('change',   function(e){
  
  });
 
+let panier = [];
+let i=1;
 
 $('#AjouterProduit').livequery('click', function(e){
-  fetch("http://localhost:5000/article/all") 
-  .then(function(response){
-  return response.json();
-  })
-  .then(function(data){
-    console.log(data);
-  localStorage.setItem("articles", JSON.stringify(data));
-    if(!localStorage.getItem("panier")){
-    localStorage.setItem("panier", "[]");
-    }
-  });
-  
-  
-  function addItemeToPanier(articleId){
-    let articles = JSON.parse(localStorage.getItem("articles"));
-    let panier = JSON.parse(localStorage.getItem("panier"));
-    console.log("article");
-    console.log(articles);
-    console.log("fin");
-    let article = articles.data.find(function(item){
-      return item.id == articleId;
-    });
-    if (panier.lenght == 0){
-      panier.push("article");
-    }else{
-      let res = panier.find(element => element.id == articleId);
-      if(res === undefined){
-        panier.push(article);
-      }
-    }
-    localStorage.setItem("panier", JSON.stringify(articles));
-  //  console.log(panier);
-  }
+
+  var product = new Object();
+  product.num = i;
+
   id = $('#entree').val(); 
-  addItemeToPanier(id);
-  document.getElementById("entree").value ="selectionner le nom de l'article";
+  product.nom =  $(`[value="${id}"]`).html() ;
+  product.quantite = document.getElementById("quantity").value;
+  product.prix_total = document.getElementById("prix_total").value; 
+  i = i++;
+
+  panier.push(product)
+  
+
+  localStorage.setItem("panier", JSON.stringify(panier));
+
+  document.getElementById("entree").value = 0;
   document.getElementById("quantity").value ="";
   document.getElementById("prix_unitaire").value ="";
   document.getElementById("prix_total").value ="";
+
+  console.log( JSON.parse(localStorage.getItem("panier")) ) ;
 });
+  
+  
+  
 
 $('#ValiderCommande').livequery('click', function(e){
-  window.location.href="file:///C:/Users/dell/Documents/D%C3%A9taillant%20Dashboard/detaillant/crm-paiecash/facture.html";
+  window.location.href="facture.html";
 });
