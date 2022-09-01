@@ -1,5 +1,7 @@
 var panier = JSON.parse( localStorage.getItem('panier'));
 console.log(panier);
+var puerto = JSON.parse(localStorage.getItem('puerto'));
+console.log(puerto);
 var NetApayer = 0;
 $.each(panier, function(key, value){
     $('tbody').append(`<tr>

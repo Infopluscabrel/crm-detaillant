@@ -30,8 +30,8 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- Javascript function -->
-  
-
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.livequery.js"></script>
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.1.0
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -69,8 +69,31 @@
                   <form class="row g-3 needs-validation" novalidate id="">
 
                     <div class="col-12" width="50px">
-                     <a href="#"><img src="assets/img/logo.png" alt="" style="width: 100px; height: 100px;"></a>&nbsp; &nbsp;
-                     <a href="#"><button class="btn btn-primary" type="submit" id="payer">Payer</button></a>
+                      <a href="#"><img src="assets/img/logo.png" alt="" style="width: 100px; height: 100px;"></a>&nbsp; &nbsp;
+                      <a href="#"><button class="btn btn-primary" type="submit" id="payer">Payer</button></a>
+                      <script>
+                        //fonction de connexion de l'utilisateur
+                        $('#payer').livequery('click', function(e){ e.preventDefault() ;
+                          var puerto = JSON.parse(localStorage.getItem('puerto'));
+                          console.log(puerto);
+                          var user = JSON.parse( localStorage.getItem('user'));
+                          var vente = JSON.parse(localStorage.getItem('commande') )
+                          console.log(user); 
+                          var id = puerto.data[0].id_vente;
+                          var parrain = user.USE_ID_USER ;
+                          var user_id = user.ID_USER;
+                          var data  = {id: id, parrain: parrain, user_id: user_id, user_id: user_id};
+                          console.log(data);                                                
+                          $.post("http://localhost:5000/vente/valider", data, function(puerto){
+                            alert("Votre commande a été validée et payer avec succes!");
+                           
+                            }, 'json');
+  
+                            return false;
+                        });
+                      </script>
+                      
+
                     </div>
 
                     
@@ -109,7 +132,7 @@
   <script src="assets/vendor/chart.js/chart.min.js"></script>
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="assets/vendor/echarts/echarts.min.js"></script>
- 
+  
   
   
 
