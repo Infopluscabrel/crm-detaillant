@@ -51,12 +51,14 @@ function show(data) {
 $('#saveStock').livequery('submit',   function(e){ e.preventDefault() ; 
     var nom = document.getElementById("entree").value;
     var quantite = document.getElementById("yourEmail").value;
-    
-          
+    var user = JSON.parse( localStorage.getItem('user'));
+    	console.log(user);
+    var proprietaire = user.USE_ID_USER;  
+          console.log(proprietaire);
  	var data  = {id: nom, quantite: quantite};
  	 console.log(data);
 
-  	$.post("http://localhost:5000/article/stock/entree", data, function(puerto){
+  	$.post("http://localhost:5000/article/stock/entree/", data, function(puerto){
 
    console.log(puerto) ;
   }, 'json');
@@ -70,21 +72,33 @@ const getArticle_url =
 	"http://localhost:5000/article/stock/entree/all";
 
 // Defining async function
-async function getapi(url) {
+async function getapi() {
 	
 	// Storing response
-	const response = await fetch(url);
+	//const response = await fetch(url);
 	
 	// Storing data in form of JSON
-	var data = await response.json();
-	console.log(data);
-	if (response) {
+	var user = JSON.parse( localStorage.getItem('user'));
+    console.log(user);
+    var propriétaire = user.ID_USER;
+        
+   var data  = { proprietaire: ""+propriétaire};
+    console.log(data);
+	$.get("http://localhost:5000/stock/entree/all", data, function(puerto){
+    var user = JSON.parse( localStorage.getItem('user'));
+    console.log(user);
+    var user_id = user.ID_USER;
+    
+    console.log(puerto); 
+    console.log(user_id);
+	if (puerto) {
 		hideloader();
 	}
-	show(data);
+	show(puerto);
+  });
 }
 // Calling that async function
-getapi(getArticle_url);
+getapi();
 
 // Function to hide the loader
 function hideloader() {

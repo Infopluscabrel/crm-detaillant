@@ -84,7 +84,7 @@
                           var user_id = user.ID_USER;
                           var data  = {id: id, parrain: parrain, user_id: user_id, user_id: user_id};
                           console.log(data);                                                
-                          $.post("http://localhost:5000/vente/valider", data, function(puerto){
+                          $.post("http://localhost:5000/vente/valider/detaillant", data, function(puerto){
                             alert("Votre commande a été validée et payer avec succes!");
                            
                             }, 'json');

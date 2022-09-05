@@ -25,18 +25,21 @@ return false;
 });
 
 $('#quantity').livequery('change',   function(e){ 
-  id = $('#entree').val(); 
-   console.log(id);
-  qte = document.getElementById("quantity").value;
-  console.log(qte);
- 
- $.get("http://localhost:5000/article/profile/"+id, function(puerto){
-   
-   $("#prix_total").val(puerto.data[0].prix * qte ) ;
-   }, 'json');
- return false;
- 
- });
+  $.get("http://localhost:5000/article/profile/"+id, function(puerto){
+    id = $('#entree').val(); 
+    console.log(id);
+   qte = document.getElementById("quantity").value;
+   console.log(qte);
+    if($("#prix_unitaire").val(puerto.data[0].prix) < qte){
+      alert("vous ne pouvez pas commander cette quantité le stock du vendeur est moins que cela")
+    } else{
+      $.get("http://localhost:5000/article/profile/"+id, function(puerto){
+        $("#prix_total").val(puerto.data[0].prix * qte ) ;
+      }, 'json');
+    }   
+  }, 'json');
+  return false;
+});
 let commande = [];
 let panier = [];
 let i=1;

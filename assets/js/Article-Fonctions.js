@@ -5,14 +5,12 @@ $('#saveArticle').livequery('submit',   function(e){ e.preventDefault() ;
     var nom = document.getElementById("nom").value;
     var quantite = document.getElementById("quantite").value;
     var prix = document.getElementById("prix-article").value;
-    var formData = new FormData();
-    formData.append('nom', nom);
-    formData.append('prix', prix);
-    formData.append('quantite', quantite);
-    formData.append('proprietaire', "1");
-    
+    var user = JSON.parse( localStorage.getItem('user'));
+    console.log(user);
+    var user_id = user.ID_USER;
+        
   
- var data  = {nom: nom, prix: prix, quantite: quantite, proprietaire: "1"};
+ var data  = {nom: nom, prix: prix, quantite: quantite, proprietaire: user_id};
   console.log(data);
 
   $.post("http://localhost:5000/article/new", data, function(puerto){
@@ -30,40 +28,50 @@ $('#saveArticle').livequery('submit',   function(e){ e.preventDefault() ;
 
 
 //fonction pour lister les article
-// api url
-const getArticle_url =
-	"http://localhost:5000/article/all";
 
 // Defining async function
-async function getapi(url) {
+async function getapi() {
 	
 	// Storing response
-	const response = await fetch(url);
-	
+	//const response = await fetch(url);
+  
+    var user = JSON.parse( localStorage.getItem('user'));
+    console.log(user);
+    var user_id = user.ID_USER;
+        
+   var data  = { user_id: ""+user_id};
+    console.log(data);
+    if(user_id = JSON.parse( localStorage.getItem('user'))){
+	    $.get("http://localhost:5000/article/all/detaillant", data, function(puerto){
+        var user = JSON.parse( localStorage.getItem('user'));
+        console.log(user);
+        var user_id = user.ID_USER;
+    
+        console.log(puerto); 
+        console.log(user_id);
+        if (puerto) {
+          hideloader();
+        }
+        show(puerto);
+        //location.reload();
+      });
+    }else{}
 	// Storing data in form of JSON
-	var data = await response.json();
-	console.log(data);
-	if (response) {
-		hideloader();
-	}
-	show(data);
 }
 // Calling that async function
-getapi(getArticle_url);
-
+getapi();
 // Function to hide the loader
 function hideloader() {
-	
 }
 // Function to define innerHTML for HTML table
 function show(data) {
-    console.log(data);
-
-    
+  console.log(data);
+  if(user_id = JSON.parse( localStorage.getItem('user'))){
+   
 	let tab =
 		`<tr>
         <th>#</th>
-		<th>Nom</th>
+		    <th>Nom</th>
         <th>Quantite</th>
         <th>Date</th>
         <th>Options</th>
@@ -71,14 +79,13 @@ function show(data) {
 	
 	// Loop to access all rows
 	 for (let r of data.data) {
+    console.log(data.data);
 		tab += `<tr>
-    <td>${r.ID_PRODUIT} </td>      
-	<td>${r.NOM_PRODUIT} </td>
-	<td>${r.QUANTITE}</td>
-	<td>${r.CREATED_AT} </td>
-       
-    <td><ul class="list-inline m-0">
-                      
+    <td>${r.ID_PRODUIT}</td>      
+	  <td>${r.NOM_PRODUIT}</td>
+	  <td>${r.QUANTITE}</td>
+	  <td>${r.CREATED_AT}</td>
+    <td><ul class="list-inline m-0">          
     <li class="list-inline-item">
       <button class="btn btn-success btn-sm " type="button" data-toggle="modal" data-target="#editerArticle" data-placement="top" title="Edit"
         style="margin-bottom: 10px; vertical-align: baseline;"><i class="bi bi-pencil-square"></i>Editer</button>
@@ -96,4 +103,7 @@ function show(data) {
   
 	// Setting innerHTML as tab variable
 	document.getElementById("list-article").innerHTML = tab;
+} else{
+  
+}
 }
