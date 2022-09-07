@@ -516,9 +516,9 @@
       
             </div>
       
-            <form class="row g-3 needs-validation" novalidate id="saveStock">
+            <form class="row g-3 needs-validation" novalidate id="editerStock">
               <div class="select">
-                <select name="article_id" class="form-control" id="entree" onclick="" >
+                <select name="article_id" class="form-control" id="editer" onclick="" >
                     <option value="0">Sélectionnez le nom de l'article </option>
   
                 </select>    
@@ -709,14 +709,14 @@
 
     $(document).ready(function () {
       const getNomArticle_url =
-        "http://localhost:5000/article/all";
+        "http://localhost:5000/article/all/detaillant";
       getapi(getNomArticle_url);
     });
 
 
     let list_nom;
     const getNomArticle_url =
-      "http://localhost:5000/article/all";
+      "http://localhost:5000/article/all/detaillant";
 
     // Defining async function
     async function getapi(url) {

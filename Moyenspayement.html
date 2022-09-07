@@ -82,11 +82,11 @@
                           var id = puerto.data[0].id_vente;
                           var parrain = user.USE_ID_USER ;
                           var user_id = user.ID_USER;
-                          var data  = {id: id, parrain: parrain, user_id: user_id, user_id: user_id};
+                          var data  = {id: id, parrain: parrain, user_id: user_id};
                           console.log(data);                                                
                           $.post("http://localhost:5000/vente/valider/detaillant", data, function(puerto){
                             alert("Votre commande a été validée et payer avec succes!");
-                           
+                           console.log(data);
                             }, 'json');
   
                             return false;
