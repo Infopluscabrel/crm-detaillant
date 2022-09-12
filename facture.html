@@ -67,11 +67,38 @@
                   <div class="pt-4 pb-2">
                     <h5 class="card-title text-center pb-0 fs-4">Facture</h5>
                   </div>
-
+                  <hr>
+                    <span>nom client :</span>&nbsp; &nbsp;<span  id="name"></span><br>
+                    <span>téléphone :</span>&nbsp; &nbsp;<span  id="telephone"></span><br>
+                    <span>Email :</span>&nbsp; &nbsp;<span  id="email"></span><br>
+                    <span>nui :</span>&nbsp; &nbsp;<span  id="nui"></span><br>
+                    <span>patente :</span>&nbsp; &nbsp;<span id="patente"></span><br>
+                    <span>date :</span>&nbsp; &nbsp;<span  id="date"></span><br>
+                  <hr>
+                  <script>
+                    var user = localStorage.getItem('user');
+                    console.log(user);
+                    Nom = JSON.parse(user).LOGIN; 
+                    Phone = JSON.parse(user).TELEPHONE;
+                    Email = JSON.parse(user).email;
+                    nui = JSON.parse(user).nui;
+                    patente = JSON.parse(user).patente;
+                    $('#name').html(`${Nom}`);
+                    $('#telephone').html(`${Phone}`);
+                    $('#email').html(`${Email}`);
+                    $('#nui').html(`${nui}`);
+                    $('#patente').html(`${patente}`);
+                    var d = new Date();
+                    var date = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+                    var hours = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+                    var fullDate = date+' '+hours;
+                    console.log(fullDate);
+                    document.getElementById("date").innerHTML = fullDate;
+                  </script>
                   <form  id="savefacture">
 
-                    <div class="col-12">
-                      <label for="detailscommande" class="form-label">Détails de la  commande</label>
+                    <div class="col-12" id="content">
+                      
                       <table class="table" id="">
                         <thead>
                           <tr>
@@ -87,33 +114,53 @@
 
                     </div>
 
+                    
+                      <span id="ristourne">Ristourne:</span><br>
+                      <span id="precompte">Precompte:</span><br>
+                      <span id="momtantht">Montant HT:</span><br>
+                      <span id="tva">TVA:</span><br>
+                      <span id="montanttc">Montant TTC:</span><br><br>
+                      <script>
+
+                      </script>
                     <div class="input-group has-validation">
                       <span class="input-group-text" id="inputGroupPrepend">Net a payer</span>
                       <span name="username" class="form-control" id="NetApayer"></span>
                         
-                    </div><br><br>
-                    <div><a href="Moyenspayement.html"> <button class="btn btn-primary w-100" id="validerfacture" type="submit">Valider</button></a></div>                              
-                     <br> 
-                    <div class="col-12 text-center" id="qrCode" >
+                    </div><br><br><div id="editor"></div>
+                    <div><a href="Moyenspayement.html"> <button class="btn btn-primary w-100" id="validerfacture" type="submit">Valider</button></a></div> 
+                    <div><button onclick="GenererFacture()">Générer Facture</button></div>                             
+                      <br>
+                      <script src="html2pdf.bundle.min.js"></script>
+                      <script>
+                        function GenererFacture(){
+                          var doc = document.getElementById("savefacture");
+                          html2pdf().from(doc).save();
+                        }
+                      </script>  
+                      </script>
+                    <div class="col-12 text-center" id="qrCode">
 
                             <div style=" margin: auto ;">
 
-                                    <script>
-                                          console.log("facture QRCODE");
-                                          var value  =                  
-                                                $("#qrCode").kendoQRCode({
-                                            value: value,
-                                            color: "#008000" , 
-                                            size: 50,
-                                            overlay: {
-                                              imageUrl: "./assets/img/logo.png",
-                                              width: 20,
-                                              height: 20
-                                            }
-                                          });
-
-                                          $(`[data-role="surface"]`).css('margin' , 'auto') ;
-                                        </script>
+                              <script>
+                                 var user =localStorage.getItem('user');
+                                  console.log(JSON.parse(user)) ;
+                                var value  =JSON.parse(user).LOGIN;                 
+                                      $("#qrCode").kendoQRCode({
+                                  value: value,
+                                  color: "#008000" , 
+                                   size: 50,
+                                  overlay: {
+                                    imageUrl: "./assets/img/logo.png",
+                                    width: 20,
+                                    height: 20
+                                  }
+                                });
+                                $(`[data-role="surface"]`).css('margin' , 'auto') ;
+                              </script>
+                              
+                            </div>
                               </div>
                     </div>
                    

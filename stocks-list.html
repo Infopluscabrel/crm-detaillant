@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
-    <title>Gestion de stock - Détaillant Paiecash</title>
+    <title>Home - STOCK/PARAMETRE DE STOCK</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
   
@@ -53,9 +53,9 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
   
       <div class="d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="accueil.html" class="logo d-flex align-items-center">
           <img src="assets/img/logo.png" alt="">
-          <span class="d-none d-lg-block">Détaillant Paiecash</span>
+          <span class="d-none d-lg-block">REVENDEUR</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
       </div><!-- End Logo -->
@@ -297,16 +297,15 @@
     </header><!-- End Header -->
   
 
-  <!-- ======= Sidebar ======= -->
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
+   <!-- ======= Sidebar ======= -->
+   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="index.html">
+        <a class="nav-link collapsed" href="accueil.html">
           <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
+          <span>Accueil</span>
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
@@ -336,26 +335,8 @@
       </li><!-- End Components Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>Finances</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="forms-elements.html">
-              <i class="bi bi-circle"></i><span>Gains</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Resultats par Vendeur</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Forms Nav -->
-
-      <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Gestion des Stocks</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-layout-text-window-reverse"></i><span>Stocks</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -369,22 +350,40 @@
             </a>
           </li>
         </ul>
-      </li>
-      </li><!-- End Tables Nav -->  
-        <li class="nav-item">
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Ventes</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="forms-elements.html">
+              <i class="bi bi-circle"></i><span>Gains</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-layouts.html">
+              <i class="bi bi-circle"></i><span>Resultats par Client</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-item">
           <a class="nav-link collapsed" href="commande.html">
             <i class="bi bi-pen"></i>
-            <span>Enregistrer Ventes</span>
+            <span>Commandes</span>
           </a>
-        </li><!-- End suivi commande Nav -->
+        </li>
+
         <li class="nav-item">
-          <a class="nav-link collapsed" href="suivi-commande.html">
-            <i class="bi bi-book"></i>
-            <span>Mes ventes</span>
+          <a class="nav-link collapsed" href="commande.html">
+            <i class="bi bi-layout-text"></i>
+            <span>Marketing</span>
           </a>
-        </li><!-- End suivi commande Nav -->
+        </li>
               
-    
         <li class="nav-heading">Pages</li>
     
         <li class="nav-item">
@@ -416,7 +415,7 @@
         </li><!-- End Register Page Nav -->
     
         <li class="nav-item">
-          <a class="nav-link collapsed" href="pages-login.html">
+          <a class="nav-link collapsed" href="index.html">
             <i class="bi bi-box-arrow-in-right"></i>
             <span>Login</span>
           </a>
@@ -439,15 +438,14 @@
       </ul>
     
     </aside><!-- End Sidebar-->
-
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Gestion des Stocks</h1>
+      <h1>Stocks</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Gestion des stocks</li>
+          <li class="breadcrumb-item">Stocks</li>
           <li class="breadcrumb-item active">Parametres de Stocks</li>
         </ol>
       </nav>
